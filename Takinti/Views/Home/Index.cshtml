@@ -172,22 +172,22 @@
                                                     <div class="product__inner">
                                                         <div class="pro__thumb">
                                                             <a href="@Url.Action("Index","Product", new { slug = product.Slug })">
-                                                                <img src="/images/product/@product.Photo" alt="@product.Name">
+                                                                <img src="/images/product/@product.Photo" alt="@product.Name" width="270" height="270">
                                                             </a>
                                                         </div>
                                                         <div class="product__hover__info">
                                                             <ul class="product__action">
-                                                                <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                                <li><a title="Sepete Ekle" href="@Url.Action("Add","Cart", new { slug = product.Slug })"><span class="ti-shopping-cart"></span></a></li>
-                                                                <li><a title="İstek Listesi" href="@Url.Action("Add","Whishlist", new { slug = product.Slug })"><span class="ti-heart"></span></a></li>
+                                                                <li><a data-toggle="modal" data-target="#productModal" title="Hızlı Görünüm" class="quick-view modal-view detail-link" href="@Url.Action("Details","Product", new { slug = product.Slug})"><span class="ti-plus"></span></a></li>
+                                                                <li><a title="Sepete Ekle" href="javascript:void(0);" onclick="AddToCart('@product.Slug')"><span class="ti-shopping-cart"></span></a></li>
+                                                                <li><a title="İstek Listesine Ekle" href="@Url.Action("Add","Whishlist", new { slug = product.Slug })"><span class="ti-heart"></span></a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     <div class="product__details">
                                                         <h2><a href="@Url.Action("Index","Product",new { slug = product.Slug })">@product.Name</a></h2>
                                                         <ul class="product__price">
-                                                            <li class="old__price">@(product.OldPrice)?</li>
-                                                            <li class="new__price">@product.Price)?</li>
+                                                            <li class="old__price">@(product.OldPrice)₺</li>
+                                                            <li class="new__price">@(product.Price)₺</li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -208,22 +208,22 @@
                                                     <div class="product__inner">
                                                         <div class="pro__thumb">
                                                             <a href="@Url.Action("Index","Product",new { slug = product.Slug })">
-                                                                <img src="/images/product/@product.Photo" alt="@product.Name">
+                                                                <img src="/images/product/@product.Photo" alt="@product.Name" width="270" height="270">
                                                             </a>
                                                         </div>
                                                         <div class="product__hover__info">
                                                             <ul class="product__action">
-                                                                <li><a data-toggle="modal" data-target="#productModal" title="Hızlı Görünüm" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                                <li><a title="Sepete Ekle" href="@Url.Action("Add","Cart",new { slug = product.Slug })"><span class="ti-shopping-cart"></span></a></li>
-                                                                <li><a title="İstek Listesi" href="@Url.Action("Add","Wishlist",new { slug = product.Slug })"><span class="ti-heart"></span></a></li>
+                                                                <li><a data-toggle="modal" data-target="#productModal" title="Hızlı Görünüm" class="quick-view modal-view detail-link" href="@Url.Action("Index","Product", new { slug = product.Slug})"><span class="ti-plus"></span></a></li>
+                                                                <li><a title="Sepete Ekle" href="javascript:void(0);" onclick="AddToCart('@product.Slug')"><span class="ti-shopping-cart"></span></a></li>
+                                                                <li><a title="İstek Listesine Ekle" href="@Url.Action("Add","Wishlist",new { slug = product.Slug })"><span class="ti-heart"></span></a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     <div class="product__details">
                                                         <h2><a href="@Url.Action("Index","Product",new { slug = product.Slug })">@product.Name</a></h2>
                                                         <ul class="product__price">
-                                                            <li class="old__price">@(product.OldPrice)?</li>
-                                                            <li class="new__price">@product.Price)?</li>
+                                                            <li class="old__price">@(product.OldPrice)₺</li>
+                                                            <li class="new__price">@(product.Price)₺</li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -244,22 +244,22 @@
                                                     <div class="product__inner">
                                                         <div class="pro__thumb">
                                                             <a href="@Url.Action("Index","Product",new { slug = product.Slug })">
-                                                                <img src="/images/product/@product.Photo" alt="@product.Name">
+                                                                <img src="/images/product/@product.Photo" alt="@product.Name" width="270" height="270">
                                                             </a>
                                                         </div>
                                                         <div class="product__hover__info">
                                                             <ul class="product__action">
-                                                                <li><a data-toggle="modal" data-target="#productModal" title="Hızlı Görünüm" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                                <li><a title="Sepete Ekle" href="@Url.Action("Add","Cart",new { slug = product.Slug })"><span class="ti-shopping-cart"></span></a></li>
-                                                                <li><a title="İstek Listesi" href="@Url.Action("Add","Wishlist",new { slug = product.Slug })"><span class="ti-heart"></span></a></li>
+                                                                <li><a data-toggle="modal" data-target="#productModal" title="Hızlı Görünüm" class="quick-view modal-view detail-link" href="@Url.Action("Index","Product", new { slug = product.Slug})"><span class="ti-plus"></span></a></li>
+                                                                <li><a title="Sepete Ekle" href="javascript:void(0);" onclick="AddToCart('@product.Slug')"><span class="ti-shopping-cart"></span></a></li>
+                                                                <li><a title="İstek Listesine Ekle" href="@Url.Action("Add","Wishlist",new { slug = product.Slug })"><span class="ti-heart"></span></a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     <div class="product__details">
                                                         <h2><a href="@Url.Action("Index","Product",new { slug = product.Slug })">@product.Name</a></h2>
                                                         <ul class="product__price">
-                                                            <li class="old__price">@(product.OldPrice)?</li>
-                                                            <li class="new__price">@product.Price)?</li>
+                                                            <li class="old__price">@(product.OldPrice)₺</li>
+                                                            <li class="new__price">@(product.Price)₺</li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -281,22 +281,22 @@
                                                     <div class="product__inner">
                                                         <div class="pro__thumb">
                                                             <a href="@Url.Action("Index","Product",new { slug = product.Slug })">
-                                                                <img src="/images/product/@product.Photo" alt="@product.Name">
+                                                                <img src="/images/product/@product.Photo" alt="@product.Name" width="270" height="270">
                                                             </a>
                                                         </div>
                                                         <div class="product__hover__info">
                                                             <ul class="product__action">
-                                                                <li><a data-toggle="modal" data-target="#productModal" title="Hızlı Görünüm" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                                <li><a title="Sepete Ekle" href="@Url.Action("Add","Cart",new { slug = product.Slug })"><span class="ti-shopping-cart"></span></a></li>
-                                                                <li><a title="İstek Listesi" href="@Url.Action("Add","Wishlist",new { slug = product.Slug })"><span class="ti-heart"></span></a></li>
+                                                                <li><a data-toggle="modal" data-target="#productModal" title="Hızlı Görünüm" class="quick-view modal-view detail-link" href="@Url.Action("Index","Product", new { slug = product.Slug})"><span class="ti-plus"></span></a></li>
+                                                                <li><a title="Sepete Ekle" href="javascript:void(0);" onclick="AddToCart('@product.Slug')"><span class="ti-shopping-cart"></span></a></li>
+                                                                <li><a title="İstek Listesine Ekle" href="@Url.Action("Add","Wishlist",new { slug = product.Slug })"><span class="ti-heart"></span></a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     <div class="product__details">
                                                         <h2><a href="@Url.Action("Index","Product",new { slug = product.Slug })">@product.Name</a></h2>
                                                         <ul class="product__price">
-                                                            <li class="old__price">@(product.OldPrice)?</li>
-                                                            <li class="new__price">@product.Price)?</li>
+                                                            <li class="old__price">@(product.OldPrice)₺</li>
+                                                            <li class="new__price">@(product.Price)₺</li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -309,7 +309,11 @@
                         </div>
     </section>
 }
-
+<style>
+    .htc__blog__area {
+        padding-top: 50px;
+    }
+</style>
 <!-- Start Blog Area -->
 <section class="htc__blog__area bg__white pb--130">
     <div class="container">
@@ -421,3 +425,22 @@
     </div>
 </section>
 <!-- End Blog Area -->
+<!-- QUICKVIEW PRODUCT -->
+<div id="quickview-wrapper">
+    <!-- Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal__container" role="document">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div><!-- .modal-content -->
+</div><!-- .modal-dialog -->
+<!-- END Modal -->
+
+@section scripts {
+<script>
+    $('body').on('hidden.bs.modal', '.modal', function () {
+        $(this).removeData('bs.modal');
+    });
+</script>    
+}
